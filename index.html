@@ -1,70 +1,40 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>score</title>  
-    <body onload=""Enquire>
-    <script> 
-    function Enquire(){
-        var needhelp = confirm("Need help?")
-        if(needhelp){
-            var name = prompt("please enter your name");
-            var calculate = document.getElementById("Calculate");
-            Calculat.name = name;
-            Calculat();
-        }else{
-            alert('Thank you for using this app!！')
-        }
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const needsHelp = confirm('Do you need help calculating your average score?');  
   
-            function Calculate() {  
-            const unit1 = parseFloat(document.getElementById('unit1').value);  
-            const unit2 = parseFloat(document.getElementById('unit2').value);  
-            const unit3 = parseFloat(document.getElementById('unit3').value);  
-            const unit4 = parseFloat(document.getElementById('unit4').value);  
-  
-            // 计算平均分  
-            const sum = unit1 + unit2 + unit3 + unit4;  
-            const average = sum / 4;  
-            // 计算总分 
-            const totalScore = unit1 + unit2 + unit3 + unit4;  
-            // 显示结果  
-            document.getElementById('average').textContent = 'your average grades is: ' + average.toFixed(2);  
-             // 显示总分  
-             document.getElementById('totalScore').textContent = 'your total grades is: ' + totalScore.toFixed(2); 
-             
-        }  
-    </script>  
-    </body>
-</head>  
-<body>  
-    <h1>Grade </h1>  
-    <form>         
-        <label for="unit1">unit1:</label>  
-        <input type="number" id="unit1" name="unit1" step="0.01" required><br><br>  
-          
-        <label for="unit2">unit2:</label>  
-        <input type="number" id="unit2" name="unit2" step="0.01" required><br><br>  
-          
-        <label for="unit3">unit3:</label>  
-        <input type="number" id="unit3" name="unit3" step="0.01" required><br><br>  
-          
-        <label for="unit4">unit4:</label>  
-        <input type="number" id="unit4" name="unit4" step="0.01" required><br><br>  
-          
-        <input type="button" value="The average and total scores are calculated" onclick="calculateTotalScore()">  <br>
+  if (needsHelp) {  
+      // The user is prompted to enter their full name  
+      const fullName = prompt('Please enter your full name:');  
         
+      //The user is prompted to enter grades for four courses  
+      const gradeUnit1 = parseFloat(prompt('Please enter the grade for the first course:'));  
+      const gradeUnit2 = parseFloat(prompt('Please enter the grade for the sceond course:'));  
+      const gradeUnit3 = parseFloat(prompt('Please enter the grade for the third course:'));  
+      const gradeUnit4 = parseFloat(prompt('Please enter the grade for the fourth course:'));  
         
-    </form>  
-    <p id="average"></p>  
-    <p id="totalScore"></p>
-    <p id="output"></p>
-
-    <script>function thankUser() {  
-        alert('Thank you for using this app!！');  
-    }  </script>
-    <button onclick="thankUser()">0v0</button>
-</body>  
-</html>
+      // The total score is calculated  
+      const totalScore = gradeUnit1 + gradeUnit2 + gradeUnit3 + gradeUnit4;  
+        
+      // The average score is calculated  
+      const averageScore = totalScore / 4;  
+        
+      // Output the result to the console  
+      console.log(`${fullName}The total score is:${totalScore}`);  
+      console.log(`${fullName}The average score is:${averageScore.toFixed(2)}`);  
+        
+      
+      console.log('thank');  
+  } else {  
+      console.log('');  
+  }
+    </script>
+    
+</body>
+</html> 
